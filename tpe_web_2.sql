@@ -53,7 +53,7 @@ CREATE TABLE `proveedor` (
 --
 -- Índices para tablas volcadas
 --
-
+`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` 
 --
 -- Indices de la tabla `producto`
 --
@@ -87,6 +87,17 @@ ALTER TABLE `producto`
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_proveedor_fk`) REFERENCES `proveedor` (`id_proveedor`);
 COMMIT;
+-- Agrego elementos a la tabla 'proveedor'
+INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (1, 'Distrito Moda', 'Transferencia/Credito/Debito', 01124587693) ; 
+INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (2, '45 minutos', 'Transferencia',  01146134489 ) ; 
+INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (3, 'Embrujo jeans', 'Efectivo/Debito',01146136226 ) ; 
+
+
+-- Agrego elementos a la tabla 'producto'
+INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Remera Sol', 1, 'Remeras de mujer', 3, 'L', 8200) ; 
+INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Cargo Eliseo', 3, 'Pantalones de mujer', 2, 'M', 10450) ; 
+INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Campera de jean Margarita', 1, 'Camperas de mujer', 1, 'M', 12300) ; 
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
