@@ -91,12 +91,16 @@ COMMIT;
 INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (1, 'Distrito Moda', 'Transferencia/Credito/Debito', 01124587693) ; 
 INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (2, '45 minutos', 'Transferencia',  01146134489 ) ; 
 INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (3, 'Embrujo jeans', 'Efectivo/Debito',01146136226 ) ; 
+INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (4, 'Salvame', 'Efectivo',01148626139 ) ; 
+INSERT INTO `proveedor` (`id_proveedor` , `Nombre_proveedor` , `medio_de_pago` , `telefono` ) VALUES (5, 'LolaModa', 'Efectivo/Debito',22848937396 ) ; 
+
 
 
 -- Agrego elementos a la tabla 'producto'
 INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Remera Sol', 1, 'Remeras de mujer', 3, 'L', 8200) ; 
 INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Cargo Eliseo', 3, 'Pantalones de mujer', 2, 'M', 10450) ; 
 INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Campera de jean Margarita', 1, 'Camperas de mujer', 1, 'M', 12300) ; 
+INSERT INTO `producto` (`Nombre_producto`, `id_proveedor_fk`, `categoria`, `cantidad`, `talle`, `valor`) VALUES ('Hoodie Alma', 4, 'Buzos de hombre', 2, 'XL', 17000);
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
