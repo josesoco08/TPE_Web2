@@ -2,7 +2,7 @@
 # TPE_Web2
 Grupo 18 - Proyecto de control de compras
 
-Integrantes: Maite Kuhn - Josefina Socobehere
+Integrantes: Maite Kuhn (A) - Josefina Socobehere (B)
 
 Este proyecto consiste en realizar una base de datos que sirva para registrar las compras de mercaderia que se van a llevar a cabo para un local de indumentaria e identificar los proveedores de las mismas.
 
