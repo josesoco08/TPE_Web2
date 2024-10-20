@@ -1,0 +1,14 @@
+<?php include 'Template/layout/header.phtml'; ?>
+
+<div>
+    <h2>Editar Proveedor</h2>
+    <form action="<?= BASE_URL ?>updateSupplier" method="POST">
+        <input type="hidden" name="id_proveedor" value="<?= htmlspecialchars($row['id_proveedor']) ?>">
+        <input type="text" name="nombre_proveedor" value="<?= htmlspecialchars($row['nombre_proveedor']) ?>" required>
+        <input type="text" name="medio_de_pago" value="<?= htmlspecialchars($row['medio_de_pago']) ?>" required>
+        <input type="text" name="telefono" value="<?= htmlspecialchars($row['telefono']) ?>" required>
+        <input type="submit" value="Actualizar proveedor">
+    </form>
+</div>
+
+<?php include 'Template/layout/footer.phtml'; ?>

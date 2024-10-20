@@ -1,0 +1,61 @@
+<?php include 'Template/layout/header.phtml';?>
+
+<!-- Manejo de error en la vista -->
+<?php if (isset($error)): ?>
+    <div class="alert alert-danger" role="alert"><?= htmlspecialchars($error) ?></div>
+<?php endif; ?>
+<div class="table-container">
+    <div class="table-section">
+        <h2>Lista de Productos</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre del Producto</th>
+                    <th>ID Proveedor</th>
+                    <th>Categoría</th>
+                    <th>Ver Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($products as $product): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($product->Nombre_producto) ?></td>
+                        <td><?= htmlspecialchars($product->id_proveedor_fk) ?></td>
+                        <td><?= htmlspecialchars($product->categoria) ?></td>
+                        <td><a href="productDetail/<?=$product->id_producto?>">ver detalle</a></td>
+           
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-section">
+        <h2>Lista de Proveedores</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre Proveedor</th>
+                    <th>ID</th>
+                    <th>Mostrar Productos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($suppliers as $supplier): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($supplier->Nombre_proveedor) ?></td>
+                        <td><?= htmlspecialchars($supplier->id_proveedor) ?></td>
+                    
+                        <td>
+                        <a href="supplierDetail/<?=$supplier->id_proveedor?>">ver detalle</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<?php include 'Template/layout/footer.phtml';?>

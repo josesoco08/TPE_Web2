@@ -1,0 +1,32 @@
+<?php include 'Template/layout/header.phtml'; ?>
+
+<h1>Listado de Proveedores</h1> 
+<li class="btn btn-secondary"> <a href='viewFormSupplier'> Agregar proveedor </a> </li>   
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Nombre del Proveedor</th>
+        <th>Medio de Pago</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+    </tr>
+
+    <?php if (!empty($suppliers)): ?>
+        <?php foreach ($suppliers as $supplier): ?>
+            <tr>
+                <td><?= htmlspecialchars($supplier['id_proveedor']) ?></td>
+                <td><?= htmlspecialchars($supplier['Nombre_proveedor']) ?></td>
+                <td><?= htmlspecialchars($supplier['medio_de_pago']) ?></td>
+                <td><?= htmlspecialchars($supplier['telefono']) ?></td>
+                <td>
+                    <a href="editSupplier/<?= $supplier['id_proveedor'] ?>" class="btn btn-primary">Editar</a>
+                    <a href="deleteSupplier/<?= $supplier['id_proveedor'] ?>" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>No hay proveedores.</tr>
+    <?php endif; ?>
+</table>
+
+<?php include 'Template/layout/footer.phtml'; ?>

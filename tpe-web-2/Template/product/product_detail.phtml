@@ -1,0 +1,17 @@
+<?php include 'Template/layout/header.phtml'; ?>
+<h1>Detalle del Producto</h1>
+<a href='router.php?action=home' class="btn btn-secondary">Volver</a>
+
+<div class="product-details">
+    <div class="product-image">
+        <img src="<?= htmlspecialchars($product->imagen_url) ?>" alt="<?= htmlspecialchars($product->Nombre_producto) ?>" class="img-fluid">
+    </div>
+    
+    <div class="product-info">
+        <h2><?= htmlspecialchars($product->Nombre_producto) ?></h2>
+        <p><strong>Categoría:</strong> <?= htmlspecialchars($product->categoria) ?></p>
+        <p><strong>Cantidad:</strong> <?= htmlspecialchars($product->cantidad) ?></p>
+        <p><strong>Talle:</strong> <?= htmlspecialchars($product->talle) ?></p>
+        <p><strong>Valor:</strong> $<?= number_format(htmlspecialchars($product->valor), 2) ?></p>
+    </div>
+</div>

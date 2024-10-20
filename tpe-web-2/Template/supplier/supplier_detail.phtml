@@ -1,0 +1,23 @@
+<?php include 'Template/layout/header.phtml'; ?>
+
+
+<h1 class="page-title">Productos del Proveedor</h1>
+<a href='router.php?action=home' class="btn btn-secondary">Volver</a>
+
+<div class="product-list">
+    <?php if (!empty($products) && is_array($products)): ?>
+        <ul>
+            <?php foreach ($products as $product): ?>
+                <li class="product-item">
+                    <h2 class="product-name"><?= htmlspecialchars($product->Nombre_producto) ?></h2>
+                    <p class="product-category"><strong>Categoría:</strong> <?= htmlspecialchars($product->categoria) ?></p>
+                    <p class="product-quantity"><strong>Cantidad:</strong> <?= htmlspecialchars($product->cantidad) ?></p>
+                    <p class="product-size"><strong>Talle:</strong> <?= htmlspecialchars($product->talle) ?></p>
+                    <p class="product-value"><strong>Valor:</strong> <?= number_format(htmlspecialchars($product->valor)) ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p class="no-products">No hay productos para este proveedor.</p>
+    <?php endif; ?>
+</div>

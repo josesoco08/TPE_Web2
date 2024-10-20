@@ -1,0 +1,153 @@
+/* Contenedor principal para las tablas */
+.table-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Sección individual para cada tabla */
+.table-section {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* barra de navegación */
+.navbar-custom {
+    background-color: #408076; 
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white; 
+    font-size: 1.4rem; 
+    padding: 15px 20px; 
+}
+
+.navbar-custom .nav-link:hover {
+    color: #b7ebf1; 
+}
+
+.navbar {
+    padding: 1rem; 
+}
+/*footer*/
+.footer {
+    background-color: #408076; 
+    color: white; 
+    padding: 20px 0; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+.footer .container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.footer p {
+    margin: 0; 
+}
+
+.footer-link {
+    color: white; 
+    text-decoration: none; 
+}
+
+/*msg*/
+.msg-success {
+    color: green;
+    background-color: #d4edda;
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.msg-error {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 20px 0;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.product-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.product-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-name {
+    margin: 0;
+    font-size: 24px;
+    color: #2980b9;
+}
+
+.product-category, .product-quantity, .product-size, .product-value {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.no-products {
+    text-align: center;
+    font-size: 18px;
+    color: #e74c3c;
+}

@@ -1,0 +1,49 @@
+<?php
+include 'Template/layout/header.phtml';
+
+?><h1>LISTADO DE PRODUCTOS</h1> 
+<li class="btn btn-secondary"> <a href='viewForm'> Agregar producto </a> </li>   
+<?php if (!empty($productos)) {
+
+echo '<table class="table table-bordered">';
+echo "<tr>
+        <th>ID</th>
+        <th>Nombre del producto</th>
+        <th>ID Proveedor</th>
+        <th>Categoría</th>
+        <th>Cantidad</th>
+        <th>Talle</th>
+        <th>Valor</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+    </tr>";
+
+foreach ($productos as $producto) {
+    echo "<tr>";
+    echo "<td>" . htmlspecialchars($producto['id_producto']) . "</td>";
+    echo "<td>" . htmlspecialchars($producto['Nombre_producto']) . "</td>";
+    echo "<td>" . htmlspecialchars($producto['id_proveedor_fk']) . "</td>";
+    echo "<td>" . htmlspecialchars($producto['categoria']) . "</td>";
+    echo "<td>" . htmlspecialchars($producto['cantidad']) . "</td>";
+    echo "<td>" . htmlspecialchars($producto['talle']) . "</td>";
+    echo "<td>" . htmlspecialchars($producto['valor']) . "</td>";
+    if (!empty($producto['imagen'])) {
+        echo "<td><img src='" . BASE_URL . $producto['imagen'] . "' alt='Imagen del producto'></td>";
+    } else {
+        echo "<td>Sin imagen</td>";
+    }
+    echo "<td>
+            <a class='btn btn-primary' href='editProduct/" . $producto['id_producto'] . "'>Editar</a> | 
+            <a class='btn btn-danger' href='deleteProduct/" . $producto['id_producto'] ."'>Eliminar</a>
+        </td>";
+    echo "</tr>";
+}
+echo "</table>";
+echo '</div>';
+echo '</div>';
+echo '</div>';
+} else {
+echo "<p>No hay productos.</p>";
+}
+
+include 'Template/layout/footer.phtml';

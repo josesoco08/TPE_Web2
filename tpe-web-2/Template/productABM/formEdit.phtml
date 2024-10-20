@@ -1,0 +1,24 @@
+<?php
+include 'Template/layout/header.phtml';
+?>
+
+<form action="<?=BASE_URL?>updateProduct" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="id_producto" value="<?= $row['id_producto']; ?>">
+<input type="text" name="Nombre_producto" id="Nombre_producto" value="<?= $row['Nombre_producto']; ?>" >
+<input type="text" name="id_proveedor_fk" id="id_proveedor_fk" value="<?= $row['id_proveedor_fk']; ?>" >
+<input type="text" name="categoria" id="categoria" value="<?= $row['categoria']; ?>" >
+<input type="text" name="cantidad" id="cantidad" value="<?= $row['cantidad']; ?>" >
+<input type="text" name="talle" id="talle" value="<?= $row['talle']; ?>" >
+<input type="text" name="valor" id="valor" value="<?= $row['valor']; ?>" >
+
+<label for="imagen">Subir nueva imagen:</label>
+<input type="file" name="imagen" id="imagen">
+<input type="submit" value="Actualizar producto">
+</form>
+
+
+<?php
+include 'Template/layout/footer.phtml';
+?>
+
+
