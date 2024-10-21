@@ -2,12 +2,13 @@
 <h1>Detalle del Producto</h1>
 <a href='router.php?action=home' class="btn btn-secondary">Volver</a>
 
-<div class="product-details">
-    <div class="product-image">
-        <img src="<?= htmlspecialchars($product->imagen_url) ?>" alt="<?= htmlspecialchars($product->Nombre_producto) ?>" class="img-fluid">
-    </div>
+<div class="product-list">
+<div class="product-image" style="width: 100%; height:200px;">
+    <img src="<?= htmlspecialchars($product->imagen) ?>" alt="<?= htmlspecialchars($product->Nombre_producto) ?>">
+</div>
+
     
-    <div class="product-info">
+    <div class="product-item">
         <h2><?= htmlspecialchars($product->Nombre_producto) ?></h2>
         <p><strong>Categoría:</strong> <?= htmlspecialchars($product->categoria) ?></p>
         <p><strong>Cantidad:</strong> <?= htmlspecialchars($product->cantidad) ?></p>

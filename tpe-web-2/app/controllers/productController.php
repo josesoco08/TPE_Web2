@@ -59,7 +59,7 @@ class ProductController {
             if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
                 $imagenTmpPath = $_FILES['imagen']['tmp_name'];
                 $imagenNombre = basename($_FILES['imagen']['name']);
-                $imagenPath = 'img/' . $imagenNombre; 
+                $imagenPath = 'img/' . $imagenNombre;
                 move_uploaded_file($imagenTmpPath, $imagenPath);
             }else {
                 echo "Error al subir la imagen.";
